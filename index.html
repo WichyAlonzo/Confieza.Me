@@ -3,47 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Confieza.Me</title>
-		<link rel="icon" href="favicon-32x32.png">
+			<title>Confieza.Me</title>
+				<link rel="icon" href="favicon-32x32.png">
+				<link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css"/>
 
-		<link
-			rel="stylesheet"
-			href="https://bootswatch.com/4/lumen/bootstrap.min.css"
-		/>
-
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-				}
-
-			.bdpri{
-				background: #F4F4F4;
-			}
-
-footer {
-	background-color:#1A1A1A;
-	height: 50%;
-  color: white;
-  padding: 15px;
-}
-
-.main1 { 
-  display:flex;
-  margin:0 auto;
-}
-
-a img:hover {
-    color: #fff;
-}
-
-.footerS{
-
-}
-
-
-		</style>
+					<style>* {margin: 0;padding: 0;box-sizing: border-box;}.bdpri{
+					background: #F4F4F4;}footer {background-color:#1A1A1A;height: 50%;
+					color: white;padding: 15px}.main1 {display:flex;margin:0 auto}a img:hover {color: #fff;}</style>
 	</head>
 	<body class="bdpri">
 		<div class="container p-4">
@@ -53,29 +19,14 @@ a img:hover {
 						<div class="card-header">
 							<h3 class="text-center text-warning">Agrega tu confesión</h3>
 						</div>
-
 						<div class="card-body">
 							<form id="task-form">
 								<div class="form-group">
-									<input
-										type="text"
-										id="task-title"
-										class="form-control"
-										placeholder="Titulo"
-										autofocus
-									/>
+									<input type="text" id="task-title" class="form-control" placeholder="Titulo" autofocus/>
 								</div>
-
 								<div class="form-group">
-									<textarea
-										name=""
-										id="task-description"
-										rows="3"
-										placeholder="Descripción"
-										class="form-control"
-									></textarea>
+									<textarea name="" id="task-description" rows="3" placeholder="Descripción" class="form-control"></textarea>
 								</div>
-
 								<div class="form-group text-center">
 									<button class="btn btn-success px-5 py-2" id="btn-task-form">
 										Guardar
@@ -86,24 +37,17 @@ a img:hover {
 					</div>
 				</div>
 			</div>
-
 			<div
 				class="row d-flex justify-content-center mt-4"
 				id="tasks-container"
 			></div>
 		</div>
 
-		<!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
-  <!-- Section: Social media -->
-  <!-- Section: Links  -->
   <section class="">
     <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
       <div class="row mt-3">
-        <!-- Grid column -->
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
             <i class="fas fa-gem me-3"></i>Acerca de
           </h6>
@@ -111,11 +55,7 @@ a img:hover {
             Esta página es creada para subir confesiones, no somos responsables del contenido que llegue a subir las personas, si vez alguna agresión con la persona escriben para reportar <a href="https://wa.me/524451540656">aquí</a> <br>-🍊🥥
           </p>
         </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
             Paginas similares Facebook:
           </h6>
@@ -125,13 +65,8 @@ a img:hover {
           <p>
             <a href="https://www.facebook.com/UPC.Oficialx/" class="text-reset">UPCPJC</a>
           </p>      
-
         </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
             Grupos De WhatsApp:
           </h6>
@@ -139,11 +74,7 @@ a img:hover {
             <a href="https://chat.whatsapp.com/K2H4Oaotb1a5h7gkO4xbMY" class="text-reset">UPCPJC</a>
           </p>          
         </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
             Contacto:
           </h6>
@@ -154,40 +85,32 @@ a img:hover {
           </p>
           <p><i class="fas fa-phone me-3"></i> +52 445 154 0656</p>        
         </div>
-        <!-- Grid column -->
       </div>
-      <!-- Grid row -->
     </div>
   </section>
-  <!-- Section: Links  -->
-
-  <!-- Copyright -->
+	
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     Creado por: 
     <a class="text-reset fw-bold" href="https://wa.me/524451540656/">WichyAlonzo</a>
   </div>
-  <!-- Copyright -->
-
-
-
-		<!-- The core Firebase JS SDK is always required and must be listed first -->
 		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-
-		<!-- TODO: Add SDKs for Firebase products that you want to use
-		 https://firebase.google.com/docs/web/setup#available-libraries -->
-
 		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
 
 		<script>
-			// Your web app's Firebase configuration
 			<Script Language='Javascript'>
-<!-- Codificacion Realizada en Tutores.org -->
-<!--
-document.write(unescape('%2F%2F%20Your%20web%20app%27s%20Firebase%20configurationrn%09%09%09var%20firebaseConfig%20%3D%20%7Brn%09%09%09%09apiKey%3A%20%22AIzaSyB9s0IY1sQyd3jS96PdPc3KBCSl7VFaTK4%22%2Crn%09%09%09%09authDomain%3A%20%22jr-arguelles.firebaseapp.com%22%2Crn%09%09%09%09databaseURL%3A%20%22https%3A%2F%2Fjr-arguelles-default-rtdb.firebaseio.com%22%2Crn%09%09%09%09projectId%3A%20%22jr-arguelles%22%2Crn%09%09%09%09storageBucket%3A%20%22jr-arguelles.appspot.com%22%2Crn%09%09%09%09messagingSenderId%3A%20%2246118742765%22%2Crn%09%09%09%09appId%3A%20%221%3A46118742765%3Aweb%3A8924cd1e42dca81b607ae4%22%2Crn%09%09%09%09measurementId%3A%20%22G-2NJYLW57JT%22rn%09%09%09%7Drn%09%09%09%2F%2F%20Initialize%20Firebasern%09%09%09firebase.initializeApp%28firebaseConfig%29'));
-//-->
-</Script>
+				var firebaseConfig = {
+					apiKey: "AIzaSyB9s0IY1sQyd3jS96PdPc3KBCSl7VFaTK4",
+					authDomain: "jr-arguelles.firebaseapp.com",
+					databaseURL: "https://jr-arguelles-default-rtdb.firebaseio.com",
+					projectId: "jr-arguelles",
+					storageBucket: "jr-arguelles.appspot.com",
+					messagingSenderId: "46118742765",
+					appId: "1:46118742765:web:8924cd1e42dca81b607ae4",
+					measurementId: "G-2NJYLW57JT"
+				}
+			firebase.initializeApp(firebaseConfig)</Script>
+	
 		</script>
-
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script src="./index.js"></script>
 	</body>
