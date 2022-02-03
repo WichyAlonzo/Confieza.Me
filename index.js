@@ -1,15 +1,21 @@
 const db = firebase.firestore()
 
+//db.collection("tasks").orderBy("time", "desc")
+
+
 const form = document.querySelector('#task-form')
 const taskContainer = document.querySelector('#tasks-container')
 
 let editStatus = false
 let id = ''
+let time = new Date().toISOString()
 
-const saveTask = (title, description) =>
+const saveTask = (title, description, fecha) =>
 	db.collection('tasks').doc().set({
 		title,
 		description,
+		time,
+		
 	})
 
 const getTasks = () => db.collection('tasks').get()
@@ -28,6 +34,9 @@ window.addEventListener('DOMContentLoaded', async (e) => {
 	//const querySnapshot = await getTasks()
 
 	// esto se ejecuta cada vez que suceda algo en la db
+
+db.collection("tasks").orderBy("time", "desc")
+
 	onGetTasks((querySnapshot) => {
 		taskContainer.innerHTML = ''
 
@@ -50,8 +59,11 @@ window.addEventListener('DOMContentLoaded', async (e) => {
 form.addEventListener('submit', async (e) => {
 	e.preventDefault()
 
+	db.collection("tasks").orderBy("time", "desc")
+
 	const title = form['task-title']
 	const description = form['task-description']
+	const fecha = new Date()
 
 	if (!editStatus) {
 		if (title.value === '' || description.value === '') {
@@ -61,8 +73,9 @@ form.addEventListener('submit', async (e) => {
 			swal('Listo!', 'Se subio tu confesión', 'success')
 		}
 	} 
-	
+
 
 	form.reset()
 	title.focus()
 })
+
