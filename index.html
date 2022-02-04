@@ -6,46 +6,21 @@
 		<title>Confieza.Me - Secretos Cristianos</title>
 		<link rel="icon" href="favicon-32x32.png">
 
-		<link
-			rel="stylesheet"
-			href="https://bootswatch.com/4/lumen/bootstrap.min.css"
-		/>
+		<link rel="stylesheet"href="https://bootswatch.com/4/lumen/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="style.css">
 
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-				}
-
-			.bdpri{
-				background: #F4F4F4;
-			}
-
-footer {
-	background-color:#1A1A1A;
-	height: 50%;
-  color: white;
-  padding: 15px;
-}
-
-.main1 { 
-  display:flex;
-  margin:0 auto;
-}
-
-a img:hover {
-    color: #fff;
-}
-
-.footerS{
-
-}
-
-
-		</style>
 	</head>
 	<body class="bdpri">
+		<div id="css-modal">
+		    <input id="modal" class="css-modal-check" type="checkbox" checked />
+		    <div class="css-modal">
+		      <label for="modal" class="close"></label>
+		      <h2>Update v 1.02</h2>
+		      <p>Estos son los cambios: <br>-Campo para teléfono, úsalo al subir tu confesión si necesitas ayuda. Tu número no aparecerá en la confesión será anónimo, como tú.<br><br>En la próxima actualización estará activa la Ubicación, no te preocupes es para mejorar.<br><br>-🍊🥥
+		      </p>		     
+		    </div>
+		    <div id="overlay"></div>
+		</div>		
 		<div class="container p-4">
 			<div class="row">
 				<div class="col-md-6 mx-auto">
@@ -67,14 +42,27 @@ a img:hover {
 								</div>
 
 								<div class="form-group">
+									<input
+										type="text"
+										id="task-phone"
+										class="form-control"
+										placeholder="Deja tu numero si necesitas ayuda, Ej: +524451540656"
+									/>
+								</div>
+
+								<div class="form-group">
 									<textarea
 										name=""
 										id="task-description"
-										rows="3"
+										rows="6"
 										placeholder="Descripción"
 										class="form-control"
 									></textarea>
 								</div>
+
+								<p>
+          				<p id="task-geo"></p>          			
+        				</p> 
 
 								<div class="form-group text-center">
 									<button class="btn btn-success px-5 py-2" id="btn-task-form">
@@ -87,10 +75,9 @@ a img:hover {
 				</div>
 			</div>
 
-			<div
-				class="row d-flex justify-content-center mt-4"
-				id="tasks-container"
-			></div>
+			<div class="wrappers row d-flex justify-content-center mt-4" id="tasks-container">
+				
+			</div>
 		</div>
 
 		<!-- Footer -->
@@ -108,7 +95,7 @@ a img:hover {
             <i class="fas fa-gem me-3"></i>Acerca de
           </h6>
           <p>
-            Esta página es creada para subir confesiones, no somos responsables del contenido que llegue a subir las personas, si vez alguna agresión con la persona escriben para reportar <a href="https://wa.me/524451540656">aquí </a><br>-🍊🥥
+            Esta pagina es creada para subir confesiones, no somos responsables del contenido que llegue a subir las personas, si vez alguna agrecion con la persona esciben para reportar <a href="https://wa.me/524451540656">aqui</a> gracias por estar aqui <br>-🍊🥥
           </p>
         </div>
         <!-- Grid column -->
@@ -120,11 +107,12 @@ a img:hover {
             Paginas similares Facebook:
           </h6>
           <p>
-            <a href="https://www.facebook.com/SoyAdminSC/" class="text-reset">Secretos Cristianos</a>
+            <a href="#!" class="text-reset">UPCPJC</a>
           </p>
           <p>
-            <a href="https://www.facebook.com/UPC.Oficialx/" class="text-reset">UPCPJC</a>
+            <a href="#!" class="text-reset">Secretos Cristianos</a>
           </p>
+
         </div>
         <!-- Grid column -->
 
@@ -135,7 +123,7 @@ a img:hover {
             Grupos De WhatsApp:
           </h6>
           <p>
-            <a href="https://chat.whatsapp.com/K2H4Oaotb1a5h7gkO4xbMY" class="text-reset">UPCPJC</a>
+            <a href="#!" class="text-reset">UPCPJC</a>
           </p>          
         </div>
         <!-- Grid column -->
@@ -151,7 +139,7 @@ a img:hover {
             <i class="fas fa-envelope me-3"></i>
             app.cactuswings@gmail.com
           </p>
-          <p><i class="fas fa-phone me-3"></i> +52 445 154 0656</p>        
+          <p><i class="fas fa-phone me-3"></i> +52 445 154 0656</p>               
         </div>
         <!-- Grid column -->
       </div>
@@ -195,5 +183,8 @@ a img:hover {
 
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script src="./index.js"></script>
+
+
+
 	</body>
 </html>
