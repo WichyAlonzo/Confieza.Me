@@ -29,11 +29,6 @@ const updateTask = (id, updateTask) =>
 	db.collection('tasks').doc(id).update(updateTask)
 
 window.addEventListener('DOMContentLoaded', async (e) => {
-	//const querySnapshot = await getTasks()
-
-	// esto se ejecuta cada vez que suceda algo en la db
-
-db.collection("tasks").orderBy("time", "desc")
 
 	onGetTasks((querySnapshot) => {
 		taskContainer.innerHTML = ''
@@ -57,7 +52,6 @@ db.collection("tasks").orderBy("time", "desc")
 form.addEventListener('submit', async (e) => {
 	e.preventDefault()
 
-	db.collection("tasks").orderBy("time", "desc")
 
 	const title = form['task-title']
 	const description = form['task-description']
