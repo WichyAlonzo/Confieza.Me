@@ -29,6 +29,11 @@ const updateTask = (id, updateTask) =>
 	db.collection('tasks').doc(id).update(updateTask)
 
 window.addEventListener('DOMContentLoaded', async (e) => {
+	//const querySnapshot = await getTasks()
+
+	// esto se ejecuta cada vez que suceda algo en la db
+
+db.collection("tasks").orderBy("time", "desc")
 
 	onGetTasks((querySnapshot) => {
 		taskContainer.innerHTML = ''
@@ -51,13 +56,16 @@ window.addEventListener('DOMContentLoaded', async (e) => {
 
 form.addEventListener('submit', async (e) => {
 	e.preventDefault()
+
+	db.collection("tasks").orderBy("time", "desc")
+
 	const title = form['task-title']
 	const description = form['task-description']
 	const fecha = new Date()
 	const phonex = form['task-phone']
 
 	if (!editStatus) {
-		if (title.value === '' || description.value === '' || phonex.value === '') {
+		if (title.value === '' || description.value === '') {
 			swal('Hey!', 'Completa todos los datos.', 'warning')
 		} else {
 			await saveTask(title.value, description.value, phonex.value)
