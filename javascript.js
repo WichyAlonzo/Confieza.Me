@@ -71,7 +71,7 @@ const updateTask = (id, updateTask) => db.collection('tasks').doc(id).update(upd
 				task.id = doc.id
 
 				taskContainer.innerHTML += `
-					<div class="col-12 col-sm-5 card card-body mt-2 mx-2 border-success">
+					<div class=".col-12 .col-md-8 card card-body mt-2 mx-2 border-success">
 						<h3 class="text-primary">${task.title}</h3>
 						<p>${task.description}</p>
 					</div>
