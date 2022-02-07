@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				<meta charset="UTF-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<title>Confieza.Me</title>
+					<link rel="icon" href="favicon-32x32.png">
+
+				<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+				<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script> 
+
+					<!-- Style creados anteriores -->
+					<link rel="stylesheet"href="https://bootswatch.com/4/lumen/bootstrap.min.css"/>
+					<link rel="stylesheet" type="text/css" href="style.css">
+
+	</head>
+		<body>
+				<div class="container p-4">
+					<div class="row">
+						<div class="col-md-6 mx-auto">
+							<div class="card">
+								<div class="card-header">
+
+
+									<h5 class="text-center">Eres la visita:</h5>
+									<img src="https://www.cutercounter.com/hits.php?id=hxafpdp&nd=5&style=3" style="width:78px;display: block;margin:auto;" border="0">
+
+
+									<h3 class="text-center text-warning" style="padding-top: 10px;">Agrega tu confesión</h3>
+								</div>
+
+								<div class="card-body">
+									<form id="task-form">
+										<div class="form-group">
+											<input
+												type="text"
+												id="task-title"
+												class="form-control"
+												placeholder="Titulo"
+												autofocus
+											/>
+										</div>
+
+										<div class="form-group">
+											<input
+												type="text"
+												id="task-phone"
+												class="form-control"
+												placeholder="Deja tu numero si necesitas ayuda, Ej: +524451540656"
+											/>
+										</div>
+
+										<div class="form-group">
+											<textarea
+												name=""
+												id="task-description"
+												rows="6"
+												placeholder="Descripción"
+												class="form-control"
+											></textarea>
+										</div>
+										<div class="form-group text-center">
+											<!-- <button class="btn btn-success px-5 py-2" id="btn-task-form">
+												Guardar
+											</button> -->
+											<button id="btnsave" type="button" class="btn btn-success">Guardar</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Aqui es donde se muestra las confesiones -->
+					<div class="wrappers row d-flex justify-content-center mt-4" id="tasks-container">
+						
+					</div>
+				</div>
+
+				<!-- Footer -->
+		<footer class="text-center text-lg-start bg-light text-muted">
+		  <!-- Section: Social media -->
+		  <!-- Section: Links  -->
+		  <section class="">
+		    <div class="container text-center text-md-start mt-5">
+		      <!-- Grid row -->
+		      <div class="row mt-3">
+		        <!-- Grid column -->
+		        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+		          <!-- Content -->
+		          <h6 class="text-uppercase fw-bold mb-4">
+		            <i class="fas fa-gem me-3"></i><b>Acerca de</b>
+		          </h6>
+		          <p>
+		            Esta página es creada para subir confesiones, no somos responsables del contenido que llegue a subir las personas, si vez alguna agresión con la persona escriben para reportar 
+
+		            <a href="https://wa.me/524451540656">aquí</a> <br><br>-🍊🥥
+		          </p>
+		        </div>
+		        <!-- Grid column -->
+
+		        <!-- Grid column -->
+		        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+		          <!-- Links -->
+		          <h6 class="text-uppercase fw-bold mb-4">
+		            <b>Paginas hermanas Facebook</b>
+		          </h6>
+		          <p>
+		            <a href="https://www.facebook.com/SoyAdminSC/" class="text-reset">Secretos Cristianos</a>
+		          </p>
+		          <p>
+		            <a href="https://www.facebook.com/UPC.Oficialx/" class="text-reset">UPCPJC</a>
+		          </p>
+
+		        </div>
+		        <!-- Grid column -->
+
+		        <!-- Grid column -->
+		        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+		          <!-- Links -->
+		          <h6 class="text-uppercase fw-bold mb-4">
+		            <b>Grupos De WhatsApp</b>
+		          </h6>
+		          <p>
+		            <a href="https://api.whatsapp.com/send?phone=5214451540656&text=Agregame%20al%20Grupo%20de%20Whatsapp%20UP" class="text-reset">UPCPJC</a>
+		          </p> 
+		          <p>
+		            <a href="https://chat.whatsapp.com/LW8hIRoi4jd3GcZu7Otz2u" class="text-reset">X-Mens</a>
+		          </p>
+		          <p>
+		            <a href="https://wa.link/kcf9jw" class="text-reset">Xpresate</a>
+		          </p>
+		                    
+		        </div>
+		        <!-- Grid column -->
+
+		        <!-- Grid column -->
+		        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+		          <!-- Links -->
+		          <h6 class="text-uppercase fw-bold mb-4">
+		            <b>Contacto</b>
+		          </h6>
+		          <p><i class="fas fa-home me-3"></i>Uriangato Gto.</p>
+		          <p>
+		            <i class="fas fa-envelope me-3"></i>
+		            app.cactuswings@gmail.com
+		          </p>
+		          <p><i class="fas fa-phone me-3"></i> +52 445 154 0656</p>   
+		          	<b><p id="task-geo"></p></b>
+		        </div>
+		        <!-- Grid column -->
+		      </div>
+		      <!-- Grid row -->
+		    </div>
+		  </section>
+		  <!-- Section: Links  -->
+
+		  <!-- Copyright -->
+		  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+		    Developer's: 
+		    <a class="text-reset fw-bold" href="https://wa.me/524451540656/">WichyAlonzo</a> |
+		     <a class="text-reset fw-bold" href="https://wa.me/525631620861/">KevFM</a>
+		  </div>
+		  <!-- Copyright -->
+
+		</body>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="javascript.js"></script>
+		<!-- <script src="index.js"></script> -->
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</html>
